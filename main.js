@@ -1,10 +1,12 @@
+const $arenas = document.querySelector('.arenas');
+
 const scorpion = {
   name: 'Scorpion',
   hp: 90,
   img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
   weapon: ['pistol', 'machine gun'],
   attack: function () {
-    console.log('name' + ' Figth...');
+    console.log(this.name + ' Figth...');
   }
 };
 
@@ -14,7 +16,7 @@ const kitana = {
   img: 'http://reactmarathon-api.herokuapp.com/assets/kitana.gif',
   weapon: ['sword', 'hammer'],
   attack: function () {
-    console.log('name' + ' Figth...');
+    console.log(this.name + ' Figth...');
   }
 };
 
@@ -24,7 +26,6 @@ function createPlayer($playerName, $playerObject) {
   const $life = document.createElement('div');
   const $name = document.createElement('div');
   const $character = document.createElement('div');
-  const $arenas = document.querySelector('.arenas');
 
   $player.classList.add($playerName);
   $progressbar.classList.add('progressbar');
